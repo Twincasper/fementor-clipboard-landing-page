@@ -111,6 +111,20 @@ h1 {
   font-family: "Bai Jamjuree SemiBold";
 }
 
+h1, h2, h3 {
+  font-family: "Bai Jamjuree SemiBold";
+  color: var(--dark-grayish-blue);
+}
+
+.custom-h2 {
+  color: #4C545C;
+  font-family: "Bai Jamjuree SemiBold", sans-serif;
+  font-size: 2.25rem;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.03669rem;
+}
+
 .lead {
   font-size: 1.25rem;
   line-height: 1.875rem;

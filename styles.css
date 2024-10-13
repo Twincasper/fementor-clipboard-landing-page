@@ -110,6 +110,10 @@ h1, h2, h3 {
   color: var(--dark-grayish-blue);
 }
 
+h3 {
+  font-size: 1.45rem;
+}
+
 .custom-h2 {
   font-size: 2.25rem;
   font-style: normal;
@@ -165,8 +169,15 @@ h1, h2, h3 {
   margin-left: 6.875rem;
 }
 
-img {
-  max-width: 100%;
-  height: auto;
+
+.grid-container {
+  height: 15em;
+  display: grid;
+  grid-template-rows: 1fr min-content 1fr;
+  justify-content: center;
+  align-items: start;
 }
 
+.grid-container p {
+  max-width: 22rem;
+}

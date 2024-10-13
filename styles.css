@@ -121,6 +121,10 @@ h3 {
   letter-spacing: -0.03669rem;
 }
 
+.container:nth-of-type(7) .custom-h2 {
+  margin-top: 5rem;
+}
+
 .lead {
   line-height: 1.875rem;
   letter-spacing: 0.009375rem;
@@ -169,10 +173,9 @@ h3 {
   margin-left: 6.875rem;
 }
 
-
 .grid-container {
-  height: 15em;
   display: grid;
+  height: 15em;
   grid-template-rows: 1fr min-content 1fr;
   justify-content: center;
   align-items: start;
@@ -181,3 +184,35 @@ h3 {
 .grid-container p {
   max-width: 22rem;
 }
+
+.footer-clipboard-logo {
+  margin-right: 3.5em;
+}
+
+.footer-clipboard-logo img {
+  width: 45%;
+}
+
+ul.list-unstyled.d-flex.gap-3.mb-0 li:hover {
+  color: var(--strong-cyan);
+}
+
+.footer-links-grid {
+  display: grid;
+  max-width: 31em;
+  min-height: 3.5em;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1em;
+}
+
+
+.footer-links-grid a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.footer-links-grid a:hover {
+  color: var(--strong-cyan);
+}
+
+

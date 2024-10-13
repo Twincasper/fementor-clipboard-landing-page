@@ -60,7 +60,6 @@ p, h1, h2, h3, h4, h5, h6 {
 
   /* Typography */
   --font-family: 'Bai Jamjuree', sans-serif;
-  --font-size-body: 1.125rem;
   --font-weight-regular: 400;
   --font-weight-semibold: 600;
 }
@@ -70,7 +69,6 @@ p, h1, h2, h3, h4, h5, h6 {
 
 body {
   font-family: var(--font-family);
-  font-size: var(--font-size-body);
   color: var(--grayish-blue);
 }
 
@@ -160,5 +158,16 @@ h1, h2, h3 {
   line-height: 1.875rem;
   letter-spacing: 0.03125rem;
   padding: 0.75rem 2rem;
+}
+
+.text-content {
+  width: 21.875rem;
+  height: 25.375rem;
+  margin-left: 6.875rem;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }
 

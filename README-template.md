@@ -14,9 +14,6 @@ This is a solution to the [Clipboard landing page challenge on Frontend Mentor](
   - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
 - [Author](#author)
-- [Acknowledgments](#acknowledgments)
-
-**Note: Delete this note and update the table of contents based on what sections you keep.**
 
 ## Overview
 
@@ -29,20 +26,12 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
-
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
-
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it. 
-
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
-
-**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
+![](https://imgur.com/1KpItuD.jpg)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Solution URL]()
+- Live Site URL: [Github Page](https://twincasper.github.io/fementor-clipboard-landing-page/)
 
 ## My process
 
@@ -52,60 +41,72 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 - CSS custom properties
 - Flexbox
 - CSS Grid
-- Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
+- Bootstrap 5
 
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
-
-To see how you can add code snippets, see below:
+The header took me a lot longer than I would have liked to figure out, but eventually I learned a lot from it and reused that style throughout the project.
 
 ```html
-<h1>Some HTML code I'm proud of</h1>
+<header class="bg-header">
+    <section class="header-content">
+      <div class="container">
+        <div class="row justify-content-center text-center">
+          <div class="col-md-8">
+            <img src="images/logo.svg" alt="Clipboard logo" class="mb-5 mx-auto" width="125" height="125">
+            <h1 class="fw-semibold mb-4">A history of everything you copy</h1>
+            <p class="lead mb-5">Clipboard allows you to track and organize everything you copy. Instantly access your clipboard on all your devices.</p>
+            <div class="d-flex justify-content-center gap-3">
+              <button type="button" class="btn btn-primary btn-lg rounded-pill custom-btn">Download for iOS</button>
+              <button type="button" class="btn btn-secondary btn-lg rounded-pill custom-btn">Download for Mac</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </header>
 ```
+
+I enjoyed establishing variables in my css to use later. I think in the future I will store the percentages without them being wrapped in hsl, so I can always customize the alpha value if necessary as Kevin Powell has shown in some of his videos. This was also my first time using ::before and understanding it's potential use cases. My header was oddly layering over my buttons, so the hover effect was not kicking in at first until I utilized this.
 ```css
-.proud-of-this-css {
-  color: papayawhip;
+:root {
+  /* Colors */
+  --strong-cyan: hsl(171, 66%, 44%);
+  --light-blue: hsl(233, 100%, 69%);
+  --dark-grayish-blue: hsl(210, 10%, 33%);
+  --grayish-blue: hsl(201, 11%, 66%);
+  --footer-dark-gray: hsl(210, 10%, 33%);
+
+  /* Typography */
+  --font-family: 'Bai Jamjuree', sans-serif;
+  --font-weight-regular: 400;
+  --font-weight-semibold: 600;
+}
+
+
+.bg-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(180deg, white 0%, rgba(255, 255, 255, 0) 100%);
+  opacity: 0.25;
+  z-index: -1;
 }
 ```
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
-```
-
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
-**Note: Delete this note and the content within this section and replace with your own learnings.**
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
+I think my use of bootstrap, and making my html more semantic and accessibility friendly could use some work.
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+- [Bootstrap Docs](https://getbootstrap.com/docs/5.3/getting-started/introduction/) - I found myself using this more than google, since this was a challenge to myself to stick with bootstrap as much as possible.
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
-
-## Acknowledgments
-
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+- Website - [Github Profile](https://github.com/Twincasper)
+- Frontend Mentor - [@Twincasper](https://www.frontendmentor.io/profile/Twincasper)

@@ -59,6 +59,7 @@ p, h1, h2, h3, h4, h5, h6 {
   --light-blue: hsl(233, 100%, 69%);
   --dark-grayish-blue: hsl(210, 10%, 33%);
   --grayish-blue: hsl(201, 11%, 66%);
+  --footer-dark-gray: hsl(210, 10%, 33%);
 
   /* Typography */
   --font-family: 'Bai Jamjuree', sans-serif;
@@ -202,7 +203,8 @@ ul.list-unstyled.d-flex.gap-3.mb-0 li:hover {
   max-width: 31em;
   min-height: 3.5em;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1em;
+  gap: 5rem;
+  color: var(--footer-dark-gray);
 }
 
 
@@ -214,5 +216,3 @@ ul.list-unstyled.d-flex.gap-3.mb-0 li:hover {
 .footer-links-grid a:hover {
   color: var(--strong-cyan);
 }
-
-
